@@ -2,9 +2,6 @@
 
 With this gem you can create new car objects, create new models, add their year of production and color. You can also use different instance methods to speed up, brake and shut off the engine by playing with instance variable called "current speed". You can also change the car color with the method spray_paint.
 
-![Image description](https://www.google.com/search?q=car+paint+png+icon&tbm=isch&ved=2ahUKEwja3ZWw-vnnAhUD1-AKHbyIBDsQ2-cCegQIABAA&oq=car+paint+png+icon&gs_l=img.3..0i8i30.72449.80627..81644...4.0..0.189.1537.0j10......0....1..gws-wiz-img.......0i7i30j0i8i7i30j35i39j0.j-hVkhzG28k&ei=swVcXpq4O4Ougwe8kZLYAw&bih=625&biw=1366&rlz=1C1CHBF_enMK783MK783#imgrc=ZGWIMg9fVdq30M)
-
-
 
 ## Installation
 
