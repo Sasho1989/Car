@@ -1,6 +1,18 @@
 require "car/version"
 
 module Car
-  class Error < StandardError; end
-  # Your code goes here...
-end
+  class MyCar
+    attr_accessor :color, :current_speed
+    attr_reader :year
+    def initialize(model, year, color)
+      @model = model
+      @color = color
+      @year = year
+      @current_speed = 0
+    end
+  end
+end    
+
+
+
+
