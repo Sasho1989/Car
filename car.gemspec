@@ -8,14 +8,14 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{this is a car creator.}
   spec.description   = %q{with this gem you can create cars.}
-  spec.homepage      = 'https://www.google.com/'
+  spec.homepage      = 'https://github.com/Sasho1989/Car'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
-  spec.metadata["allowed_push_host"] = 'https://github.com/'
+  spec.metadata["allowed_push_host"] = 'https://github.com/Sasho1989/Car'
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = 'https://github.com/'
-  spec.metadata["changelog_uri"] = 'https://github.com/'
+  spec.metadata["source_code_uri"] = 'https://github.com/Sasho1989/Car'
+  spec.metadata["changelog_uri"] = 'https://github.com/Sasho1989/Car'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
