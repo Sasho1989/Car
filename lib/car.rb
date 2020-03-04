@@ -10,7 +10,11 @@ module Car
       @year = year
       @current_speed = 0
     end
-  end
+
+    def speed_up(number)
+      @current_speed += number
+    end
+  end  
 end    
 
 
