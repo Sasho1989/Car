@@ -1,12 +1,12 @@
 RSpec.describe Car::MyCar do
     it "creates instance of MyCar class" do
       volvo = Car::MyCar.new('volvo', '2019', 'yellow')
-      expect(volvo).to be_instance_of(Car::MyCar) 
+      expect(volvo).to be_instance_of(Car::MyCar)
     end
 
     it "has starting speed of 0" do
         volvo = Car::MyCar.new('volvo', '2019', 'yellow')
-        expect(volvo.current_speed).to eq(0) 
+        expect(volvo.current_speed).to eq(0)
     end
 
     it "can speed up" do
@@ -20,4 +20,22 @@ RSpec.describe Car::MyCar do
       opel.speed_up(150)
       expect(opel.current_speed).to be > 100
     end
-end
+
+    it "can speed up to default value" do
+      opel = Car::MyCar.new('astra', '2006', 'silver')
+      opel.speed_up
+      expect(opel.current_speed).to eq(Car::MyCar::SPEED_OFFSET)
+    end
+
+    it "can slow down" do
+      opel = Car::MyCar.new('astra', '2006', 'silver')
+      opel.slow_down(50)
+      expect(opel.current_speed).to eq -50
+    end
+
+    it "can slow down to default value" do
+      opel = Car::MyCar.new('astra', '2006', 'silver')
+      opel.slow_down
+      expect(opel.current_speed).to eq(-Car::MyCar::SPEED_OFFSET)
+    end
+  end
