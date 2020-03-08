@@ -36,7 +36,6 @@ module Car
     end
 
     def fix_defect(defects)
-      @defects = defects
       @defects.delete(defects)
     end
   end

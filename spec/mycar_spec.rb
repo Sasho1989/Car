@@ -1,7 +1,7 @@
 RSpec.describe Car::MyCar do
-    let(:opel) { opel = Car::MyCar.new('astra', '2006', 'silver') }
+    let(:opel) { Car::MyCar.new('astra', '2006', 'silver') }
 
-    let(:failure) {'water pump failure'}
+    let(:failure) {'water pump failure, oil leak'}
 
     it "creates instance of MyCar class" do
       expect(opel).to be_instance_of(Car::MyCar)
@@ -42,22 +42,22 @@ RSpec.describe Car::MyCar do
     end
 
     it 'has no defects' do
-      expect(opel.defects).not_to include (failure)
+      expect(opel.defects).not_to include(failure)
     end
 
     it 'is adding defects' do
-      opel.add_defects('water pump failure')
-      expect(opel.defects).to include('water pump failure')
+      opel.add_defects(failure)
+      expect(opel.defects).to include(failure)
     end
 
     it 'lists all the defects' do
-      opel.add_defects('water pump failure')
-      opel.add_defects('oil leak')
-      expect(opel.service_info).to eq("Detected defects: #{failure}, oil leak")
+      opel.add_defects(failure)
+      expect(opel.service_info).to eq("Detected defects: #{failure}")
     end
 
     it 'can fix a defect' do
+      opel.add_defects(failure)
       opel.fix_defect('water pump failure')
-      expect(opel.defects).to eq('water pump failure')
+      expect(opel.defects).not_to include('water pump failure')
     end
 end
